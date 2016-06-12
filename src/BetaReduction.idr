@@ -38,7 +38,7 @@ betaReductionGraph : Nat -> LambdaTerm -> List (LambdaTerm, LambdaTerm)
 betaReductionGraph Z _ = []
 betaReductionGraph (S d) t with (betaReduceLocs t)
   | [] = []
-  | xs = let edg = map (\loc => (t, betaReduce t loc)) (betaReduceLocs t)
+  | xs = let edg = map (\loc => (t, betaReduce t loc)) xs
          in edg ++ concatMap (betaReductionGraph d . snd) edg
 
 
