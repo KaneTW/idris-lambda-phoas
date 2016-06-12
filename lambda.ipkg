@@ -1,0 +1,8 @@
+package lambda
+
+-- lambda
+-- by 
+
+opts = ""
+sourcedir = src
+modules = Lambda, BetaReduction
