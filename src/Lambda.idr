@@ -86,3 +86,4 @@ termToString t = termToString' 0 False (t String)
     termToString' ix par (Abs' f) = needParens par $ 
       let v = "x" ++ show ix 
       in "\\" ++ v ++ "." ++ termToString' (ix + 1) False (f v)
+      
